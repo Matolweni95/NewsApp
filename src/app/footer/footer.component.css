@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    height: 10vh;
+    background: #e91e63;
+}
+
+.container {
+    margin-top: 50px;
+    min-width: 100%;    
+}
+
+p{
+   color: white;
+   margin: 0px;
+
+}

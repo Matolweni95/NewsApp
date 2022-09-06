@@ -1,16 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { ContentComponent } from '../content/content.component'
+import { BusinessComponent } from '../business/business.component';
 @Injectable({
   providedIn: 'root'
 })
 export class NewsapiService {
+  refresh: any;
 
   constructor( private _http:HttpClient) { }
+  
+  base = environment.baseUrl;
 
-  newApiUrl = "https://newsapi.org/v2/top-headlines?country=za&sortBy=publishedAt&apiKey=cfe1a5ae77f24bb283a94d475125065b"
-
+  category: any;
+  
   content():Observable<any>{
-    return this._http.get(this.newApiUrl)
+  
+    return this._http.get(this.base + `&category=sports`)
   }
+
+  contents():Observable<any>{
+  
+    return this._http.get(this.base + `&category=${this.category}`)
+  }
+
+  
+  public getRefresh(): Observable<boolean> {
+
+    return this.refresh.asObservable();
+ }
 }

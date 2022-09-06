@@ -11,6 +11,7 @@ export class ContentComponent implements OnInit {
 
   //Display section
 
+  
   DisplayContent:any = [];
 
   ngOnInit(): void {

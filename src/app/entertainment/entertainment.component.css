@@ -1,0 +1,24 @@
+mat-card {
+    background: #424242;
+}
+
+h1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+    height: 100px;
+}
+
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+}
+
+p {
+    color: #ffffffb3;
+}

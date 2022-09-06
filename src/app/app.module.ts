@@ -9,11 +9,12 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsapiService } from './service/newsapi.service';
 import { ContentComponent } from './content/content.component'
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './footer/footer.component';
 import { BusinessComponent } from './business/business.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { SportComponent } from './sport/sport.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
     BusinessComponent,
     TechnologyComponent,
     EntertainmentComponent,
+    SportComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
     HttpClientModule,
     MatCardModule
   ],
-  providers: [NewsapiService],
+  providers: [NewsapiService, ContentComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

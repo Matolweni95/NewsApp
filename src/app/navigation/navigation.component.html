@@ -6,7 +6,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" id="home" (click)="value('')" href="#">Home</a>
+          <a id="{{item['value']}}" routerLink="{{item['value']}}" *ngFor = "let item of btns" class="nav-link" aria-current="page" (click)="value(item['value'])" href="#">{{item['value2']}}</a>
         </div>
       </div>
     </div>
